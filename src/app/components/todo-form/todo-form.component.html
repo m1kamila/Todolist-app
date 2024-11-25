@@ -1,0 +1,38 @@
+<div class="container">
+  <h2>Add a Todo</h2>
+  <form (submit)="createTodo(todoName.value, todoDescription.value, todoCompleted.checked)">
+    <div class="mb-3">
+      <label for="name" class="form-label">Name</label>
+      <input
+        type="text"
+        id="name"
+        class="form-control"
+        #todoName
+        name="name"
+        required
+      />
+    </div>
+    <div class="mb-3">
+      <label for="description" class="form-label">Description</label>
+      <textarea
+        id="description"
+        class="form-control"
+        #todoDescription
+        name="description"
+        rows="3"
+        required
+      ></textarea>
+    </div>
+    <div class="form-check">
+      <input
+        type="checkbox"
+        id="completed"
+        class="form-check-input"
+        #todoCompleted
+        name="completed"
+      />
+      <label for="completed" class="form-check-label">Completed</label>
+    </div>
+    <button type="submit" class="btn btn-primary mt-3">Add Todo</button>
+  </form>
+</div>
